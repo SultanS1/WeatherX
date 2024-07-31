@@ -2,4 +2,17 @@
     <string name="app_name">weatherX</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="around_the_world">Around the world!</string>
+    <string name="search_for_a_city">Search for a city</string>
+    <string name="heavy_rain">Heavy Rain</string>
+    <string name="rome_italy">Rome, Italy</string>
+    <string name="_38">38 °</string>
+    <string name="_33">33°</string>
+    <string name="celcius">°</string>
+    <string name="roma_italy">Roma, Italy</string>
+    <string name="see_other_days"><![CDATA[See other days >>]]></string>
+    <string name="_40">40%</string>
+    <string name="wind">WIND</string>
+    <string name="_40km_h">40 km/h</string>
+    <string name="condition_type">CONDITION TYPE</string>
 </resources>

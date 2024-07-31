@@ -2,5 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="textColor">#4C0CBE</color>
+    <color name="main_bg">#09514A</color>
+    <color name="views_bg">#0B8277</color>
+    <color name="text_color">#8CCCF1</color>
+    <color name="hint_color">#6A96B0</color>
+    <color name="btn_color">#304BE3</color>
+    <color name="transparent">#00000000</color>
 </resources>

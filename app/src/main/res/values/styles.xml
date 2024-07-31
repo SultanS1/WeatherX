@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Title text style -->
+    <style name="TitleStyle">
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">@dimen/dp_1x</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="CustomSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+</resources>
