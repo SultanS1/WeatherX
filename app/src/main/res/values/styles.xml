@@ -8,8 +8,12 @@
         <item name="android:textColor">@color/text_color</item>
     </style>
 
-    <style name="CustomSearchViewStyle" parent="Widget.AppCompat.SearchView">
-        <item name="android:textColorHint">@color/hint_color</item>
+    <style name="Widget.SearchView.Material" parent="Widget.AppCompat.SearchView">
+        <item name="android:background">@drawable/rounded_corners</item>
+        <item name="android:elevation">@dimen/_2dp</item>
+        <item name="iconifiedByDefault">false</item>
+        <item name="queryHint">@string/search_for_a_city</item>
+        <item name="queryBackground">@drawable/rounded_corners</item>
     </style>
 
 </resources>

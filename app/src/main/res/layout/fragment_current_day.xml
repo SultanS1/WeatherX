@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/currentValueTxt"
+            android:id="@+id/dateTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_3x"
@@ -51,9 +51,9 @@
             android:layout_marginTop="@dimen/dp_1x"
             android:text="@string/roma_italy"
             android:textSize="@dimen/sp_2x"
-            app:layout_constraintEnd_toEndOf="@+id/currentValueTxt"
-            app:layout_constraintStart_toStartOf="@+id/currentValueTxt"
-            app:layout_constraintTop_toBottomOf="@+id/currentValueTxt" />
+            app:layout_constraintEnd_toEndOf="@+id/dateTxt"
+            app:layout_constraintStart_toStartOf="@+id/dateTxt"
+            app:layout_constraintTop_toBottomOf="@+id/dateTxt" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

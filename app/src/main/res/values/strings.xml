@@ -15,4 +15,6 @@
     <string name="wind">WIND</string>
     <string name="_40km_h">40 km/h</string>
     <string name="condition_type">CONDITION TYPE</string>
+    <string name="today">Today</string>
+    <string name="clear">Clear</string>
 </resources>

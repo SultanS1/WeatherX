@@ -51,9 +51,19 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //view binding delegate
     implementation(libs.viewBindingDelegate)
 
+    //navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    //viewPager3
+    implementation(libs.androidx.viewpager2)
+
+    //koin dependency injection
+    implementation (libs.koin.core)
+    implementation (libs.koin.android)
+
 
 }

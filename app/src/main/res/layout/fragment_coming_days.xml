@@ -8,184 +8,26 @@
     android:padding="@dimen/dp_4x"
     tools:context=".selected.moreInfo.presentation.ComingDaysFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_2x"
-        android:background="@drawable/rounded_corners"
-        android:elevation="@dimen/_2dp"
-        android:padding="@dimen/dp_3x"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="@dimen/dp_12x"
-            android:layout_height="@dimen/dp_12x"
-            android:src="@drawable/partial_cloudy"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/currentValueTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_3x"
-            android:text="@string/_38"
-            android:textSize="@dimen/sp_4x"
-            style="@style/TitleStyle"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-        <TextView
-            android:id="@+id/locationTxt"
-            style="@style/TitleStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_1x"
-            android:text="@string/roma_italy"
-            android:textSize="@dimen/sp_2x"
-            app:layout_constraintEnd_toEndOf="@+id/currentValueTxt"
-            app:layout_constraintStart_toStartOf="@+id/currentValueTxt"
-            app:layout_constraintTop_toBottomOf="@+id/currentValueTxt" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/humidityContainer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corners"
-        android:padding="@dimen/dp_2x"
-        android:layout_marginTop="@dimen/dp_2x"
-        android:elevation="@dimen/_2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-
-        <TextView
-            android:id="@+id/humidityTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="HUMIDITY"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/humidityTxt"
-            style="@style/TitleStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_40"
-            android:textSize="@dimen/sp_3x"
-            android:layout_marginTop="@dimen/dp_2x"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/humidityTitle"
-            app:layout_constraintStart_toStartOf="@+id/humidityTitle"
-            app:layout_constraintTop_toBottomOf="@+id/humidityTitle" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/windSpeedContainer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corners"
-        android:padding="@dimen/dp_2x"
-        android:layout_marginTop="@dimen/dp_1x"
-        android:elevation="@dimen/_2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/humidityContainer">
-
-
-        <TextView
-            android:id="@+id/windSpeedTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/wind"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/windSpeedTxt"
-            style="@style/TitleStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_40km_h"
-            android:textSize="@dimen/sp_3x"
-            android:layout_marginTop="@dimen/dp_2x"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/windSpeedTitle"
-            app:layout_constraintStart_toStartOf="@+id/windSpeedTitle"
-            app:layout_constraintTop_toBottomOf="@+id/windSpeedTitle" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/typeContainer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corners"
-        android:padding="@dimen/dp_2x"
-        android:layout_marginTop="@dimen/dp_1x"
-        android:elevation="@dimen/_2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/windSpeedContainer">
-
-
-        <TextView
-            android:id="@+id/typeTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/condition_type"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/typeTxt"
-            style="@style/TitleStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Clear"
-            android:textSize="@dimen/sp_3x"
-            android:layout_marginTop="@dimen/dp_2x"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/typeTitle"
-            app:layout_constraintStart_toStartOf="@+id/typeTitle"
-            app:layout_constraintTop_toBottomOf="@+id/typeTitle" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/moreBtn"
-        style="@style/TitleStyle"
+        android:id="@+id/locationTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/see_other_days"
-        android:textSize="@dimen/sp_2x"
+        android:text="@string/roma_italy"
+        style="@style/TitleStyle"
+        android:textSize="@dimen/sp_3x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comingDaysInfoRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingVertical="@dimen/dp_1x"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/locationTxt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
