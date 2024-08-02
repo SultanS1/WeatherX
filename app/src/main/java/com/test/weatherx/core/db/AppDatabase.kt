@@ -4,15 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.test.weatherx.common.entity.WeatherEntity
+import com.test.weatherx.common.local.WeatherDao
 
-//@Database(entities = [], version = 1)
+@Database(entities = [WeatherEntity::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
-//    abstract fun movieDao(): MoviesDao
-//
-//    abstract fun charactersDao(): CharactersDao
-//
-//    abstract fun planetDao(): PlanetDao
+    abstract fun weatherDao(): WeatherDao
+
     companion object{
 
         @Volatile

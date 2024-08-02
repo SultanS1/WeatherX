@@ -8,7 +8,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.test.weatherx.R
-import com.test.weatherx.core.architecture.BaseViewModel
 import com.test.weatherx.core.baseViews.BaseFragment
 import com.test.weatherx.databinding.FragmentCitiesBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -18,12 +17,13 @@ class CitiesFragment :
 
     override val binding: FragmentCitiesBinding by viewBinding()
 
-    override val viewModel: BaseViewModel by viewModel()
+    override val viewModel: CitiesViewModel by viewModel()
 
     override fun setupViews() {
         super.setupViews()
         setupSearchView()
     }
+
     private fun setupSearchView() {
         binding.searchView.setAdapter(ArrayAdapter(
             requireContext(),
@@ -52,7 +52,6 @@ class CitiesFragment :
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 binding.searchView.showDropDown()
             }
-
             override fun afterTextChanged(s: Editable?) {}
         })
     }
