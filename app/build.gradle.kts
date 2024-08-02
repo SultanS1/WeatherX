@@ -1,11 +1,20 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
     namespace = "com.test.weatherx"
     compileSdk = 34
+
+    val properties = Properties().apply {
+        load(project.rootProject.file("local.properties").inputStream())
+    }
+    val apiKey: String = properties.getProperty("APP_API_KEY")
 
     defaultConfig {
         applicationId = "com.test.weatherx"
@@ -15,7 +24,11 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "API_KEY", "\"$apiKey\"")
+
     }
+
 
     buildTypes {
         release {
@@ -36,6 +49,7 @@ android {
 
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 
 }
@@ -51,9 +65,28 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //view binding delegate
     implementation(libs.viewBindingDelegate)
 
+    //navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    //viewPager3
+    implementation(libs.androidx.viewpager2)
+
+    //koin dependency injection
+    implementation (libs.koin.core)
+    implementation (libs.koin.android)
+
+    //retrofit
+    implementation (libs.gson)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.okhttp)
+
+    //room
+    implementation(libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler)
 
 }

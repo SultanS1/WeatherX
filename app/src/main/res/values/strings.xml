@@ -15,4 +15,181 @@
     <string name="wind">WIND</string>
     <string name="_40km_h">40 km/h</string>
     <string name="condition_type">CONDITION TYPE</string>
+    <string name="today">Today</string>
+    <string name="clear">Clear</string>
+    <string name="search">Search</string>
+
+    <string-array name="city_names">
+        <!-- United States -->
+        <item>New York</item>
+        <item>Los Angeles</item>
+        <item>Chicago</item>
+        <item>Houston</item>
+        <item>Phoenix</item>
+        <item>Philadelphia</item>
+        <item>San Antonio</item>
+        <item>San Diego</item>
+        <item>Dallas</item>
+        <item>San Jose</item>
+
+        <!-- Canada -->
+        <item>Toronto</item>
+        <item>Vancouver</item>
+        <item>Montreal</item>
+        <item>Calgary</item>
+        <item>Ottawa</item>
+
+        <!-- United Kingdom -->
+        <item>London</item>
+        <item>Manchester</item>
+        <item>Birmingham</item>
+        <item>Glasgow</item>
+        <item>Edinburgh</item>
+
+        <!-- Australia -->
+        <item>Sydney</item>
+        <item>Melbourne</item>
+        <item>Brisbane</item>
+        <item>Perth</item>
+        <item>Adelaide</item>
+
+        <!-- India -->
+        <item>Mumbai</item>
+        <item>Delhi</item>
+        <item>Bangalore</item>
+        <item>Hyderabad</item>
+        <item>Ahmedabad</item>
+
+        <!-- China -->
+        <item>Beijing</item>
+        <item>Shanghai</item>
+        <item>Guangzhou</item>
+        <item>Shenzhen</item>
+        <item>Chengdu</item>
+
+        <!-- Japan -->
+        <item>Tokyo</item>
+        <item>Osaka</item>
+        <item>Yokohama</item>
+        <item>Nagoya</item>
+        <item>Sapporo</item>
+
+        <!-- South Korea -->
+        <item>Seul</item>
+        <item>Busan</item>
+
+        <!-- Brazil -->
+        <item>São Paulo</item>
+        <item>Rio de Janeiro</item>
+        <item>Belo Horizonte</item>
+        <item>Brasília</item>
+        <item>Salvador</item>
+
+        <!-- Russia -->
+        <item>Moscow</item>
+        <item>Saint Petersburg</item>
+        <item>Novosibirsk</item>
+        <item>Yekaterinburg</item>
+        <item>Kazan</item>
+
+        <!-- Germany -->
+        <item>Berlin</item>
+        <item>Munich</item>
+        <item>Frankfurt</item>
+        <item>Hamburg</item>
+        <item>Cologne</item>
+
+        <!-- France -->
+        <item>Paris</item>
+        <item>Marseille</item>
+        <item>Lyon</item>
+        <item>Toulouse</item>
+        <item>Nice</item>
+
+        <!-- Italy -->
+        <item>Rome</item>
+        <item>Milan</item>
+        <item>Naples</item>
+        <item>Turin</item>
+        <item>Palermo</item>
+
+        <!-- Spain -->
+        <item>Madrid</item>
+        <item>Barcelona</item>
+        <item>Valencia</item>
+        <item>Seville</item>
+        <item>Zaragoza</item>
+
+        <!-- Russia -->
+        <item>Moscow</item>
+        <item>Saint Petersburg</item>
+        <item>Novosibirsk</item>
+        <item>Yekaterinburg</item>
+        <item>Kazan</item>
+        <item>Nizhny Novgorod</item>
+        <item>Chelyabinsk</item>
+        <item>Samara</item>
+        <item>Omsk</item>
+        <item>Rostov-on-Don</item>
+
+        <!-- Ukraine -->
+        <item>Kyiv</item>
+        <item>Kharkiv</item>
+        <item>Odessa</item>
+        <item>Dnipro</item>
+        <item>Lviv</item>
+
+        <!-- Belarus -->
+        <item>Minsk</item>
+        <item>Gomel</item>
+        <item>Mogilev</item>
+        <item>Vitebsk</item>
+        <item>Hrodna</item>
+        <item>Brest</item>
+
+        <!-- Kazakhstan -->
+        <item>Almaty</item>
+        <item>Nur-Sultan</item>
+        <item>Shymkent</item>
+        <item>Karaganda</item>
+        <item>Aktobe</item>
+
+        <!-- Uzbekistan -->
+        <item>Tashkent</item>
+        <item>Samarkand</item>
+        <item>Bukhara</item>
+        <item>Namangan</item>
+        <item>Andijan</item>
+
+        <!-- Armenia -->
+        <item>Yerevan</item>
+        <item>Gyumri</item>
+        <item>Vanadzor</item>
+
+        <!-- Azerbaijan -->
+        <item>Baku</item>
+        <item>Ganja</item>
+        <item>Sumqayit</item>
+
+        <!-- Kyrgyzstan -->
+        <item>Bishkek</item>
+        <item>Osh</item>
+        <item>Jalal-Abad</item>
+
+        <!-- Tajikistan -->
+        <item>Dushanbe</item>
+        <item>Khujand</item>
+        <item>Bokhtar</item>
+
+        <!-- Turkmenistan -->
+        <item>Ashgabat</item>
+        <item>Turkmenabat</item>
+        <item>Dashoguz</item>
+
+        <!-- Moldova -->
+        <item>Chisinau</item>
+        <item>Tiraspol</item>
+        <item>Balti</item>
+    </string-array>
+
 </resources>

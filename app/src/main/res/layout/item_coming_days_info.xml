@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_corners"
     android:elevation="@dimen/_2dp"
+    android:layout_marginVertical="@dimen/dp_1x"
     android:padding="@dimen/dp_3x">
 
     <TextView
@@ -13,32 +14,23 @@
         style="@style/TitleStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_38"
+        android:text="@string/today"
         android:textSize="@dimen/sp_5x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/weatherTypeTxt"
+        android:id="@+id/typeTxt"
+        style="@style/TitleStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_1x"
-        android:text="@string/heavy_rain"
-        android:textSize="@dimen/sp_2x"
-        app:layout_constraintStart_toStartOf="@+id/dateTxt"
-        app:layout_constraintTop_toBottomOf="@+id/dateTxt" />
-
-    <TextView
-        android:id="@+id/locationTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_3x"
-        android:text="@string/rome_italy"
+        android:text="@string/clear"
         android:textSize="@dimen/sp_3x"
-        style="@style/TitleStyle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/weatherTypeTxt"
-        app:layout_constraintTop_toBottomOf="@+id/weatherTypeTxt" />
+        app:layout_constraintEnd_toEndOf="@+id/dateTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTxt" />
 
     <ImageView
         android:id="@+id/typeIc"
@@ -52,15 +44,16 @@
         android:id="@+id/highestValueTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:text="@string/_33"
         android:textSize="@dimen/sp_2x"
-        app:layout_constraintBottom_toBottomOf="@+id/locationTxt"
+        android:layout_marginEnd="@dimen/dp_2x"
+        android:layout_marginTop="@dimen/dp_1x"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/lowestValueTxt"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toEndOf="@+id/locationTxt"
-        app:layout_constraintTop_toTopOf="@+id/locationTxt"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/typeIc"
+        app:layout_constraintTop_toBottomOf="@+id/typeIc"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/lowestValueTxt"
