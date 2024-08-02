@@ -23,6 +23,8 @@ class CitiesHolderFragment :
 
     override fun setupViews() {
         super.setupViews()
+        adapter.setData(listOf("s", "3", "g"))
+        binding.viewPager.adapter = adapter
     }
 
 }

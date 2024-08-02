@@ -1,60 +1,64 @@
 package com.test.weatherx.cities.presentation
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.content.Context
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
+import android.widget.ArrayAdapter
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.test.weatherx.R
+import com.test.weatherx.core.architecture.BaseViewModel
+import com.test.weatherx.core.baseViews.BaseFragment
+import com.test.weatherx.databinding.FragmentCitiesBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class CitiesFragment :
+    BaseFragment<FragmentCitiesBinding>(R.layout.fragment_cities) {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CitiesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class CitiesFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    override val binding: FragmentCitiesBinding by viewBinding()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    override val viewModel: BaseViewModel by viewModel()
+
+    override fun setupViews() {
+        super.setupViews()
+        setupSearchView()
     }
+    private fun setupSearchView() {
+        binding.searchView.setAdapter(ArrayAdapter(
+            requireContext(),
+            android.R.layout.simple_dropdown_item_1line,
+            resources.getStringArray(R.array.city_names)))
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cities, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CitiesFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CitiesFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        binding.searchView.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                val query = binding.searchView.text.toString()
+                if (query.isNotEmpty()) {
+                    // Trigger the ViewModel's search method
+                    // viewModel.searchCity(query)
+                    // Clear focus and hide keyboard
+                    binding.searchView.clearFocus()
+                    hideKeyboard()
                 }
+                true
+            } else {
+                false
             }
+        }
+
+        binding.searchView.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                binding.searchView.showDropDown()
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
+    }
+
+    private fun hideKeyboard() {
+        val inputMethodManager = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view?.windowToken, 0)
     }
 }

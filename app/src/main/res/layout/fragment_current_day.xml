@@ -12,7 +12,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_2x"
+        android:layout_marginTop="@dimen/dp_3x"
         android:background="@drawable/rounded_corners"
         android:elevation="@dimen/_2dp"
         android:padding="@dimen/dp_3x"
@@ -173,18 +173,5 @@
             app:layout_constraintTop_toBottomOf="@+id/typeTitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/moreBtn"
-        style="@style/TitleStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/see_other_days"
-        android:textSize="@dimen/sp_2x"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

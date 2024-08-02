@@ -20,15 +20,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.SearchView
+    <AutoCompleteTextView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/dp_2x"
+        android:hint="@string/search_for_a_city"
         android:layout_marginTop="@dimen/dp_2x"
-        style="@style/Widget.SearchView.Material"
+        android:textColorHint="@color/hint_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/citiesRv"

@@ -8,5 +8,28 @@
         android:id="@+id/citiesFragment"
         android:name="com.test.weatherx.cities.presentation.CitiesFragment"
         android:label="fragment_cities"
-        tools:layout="@layout/fragment_cities" />
+        tools:layout="@layout/fragment_cities" >
+        <action
+            android:id="@+id/action_citiesFragment_to_citiesHolderFragment"
+            app:destination="@id/citiesHolderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/citiesHolderFragment"
+        android:name="com.test.weatherx.selected.mainInfo.presentation.CitiesHolderFragment"
+        android:label="fragment_cities_holder"
+        tools:layout="@layout/fragment_cities_holder" />
+    <fragment
+        android:id="@+id/comingDaysFragment"
+        android:name="com.test.weatherx.selected.moreInfo.presentation.ComingDaysFragment"
+        android:label="fragment_coming_days"
+        tools:layout="@layout/fragment_coming_days" />
+    <fragment
+        android:id="@+id/currentDayFragment"
+        android:name="com.test.weatherx.selected.mainInfo.presentation.CurrentDayFragment"
+        android:label="fragment_current_day"
+        tools:layout="@layout/fragment_current_day" >
+        <action
+            android:id="@+id/action_currentDayFragment_to_comingDaysFragment"
+            app:destination="@id/comingDaysFragment" />
+    </fragment>
 </navigation>
