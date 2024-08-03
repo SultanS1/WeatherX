@@ -1,8 +1,12 @@
 package com.test.weatherx.selected.mainInfo.presentation
 
+import android.view.View
+import android.widget.Toast
+import androidx.lifecycle.Observer
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.test.weatherx.R
 import com.test.weatherx.core.architecture.BaseViewModel
+import com.test.weatherx.core.architecture.NetworkStatus
 import com.test.weatherx.core.baseViews.BaseFragment
 import com.test.weatherx.databinding.FragmentCitiesHolderBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -12,7 +16,7 @@ class CitiesHolderFragment :
 
     override val binding: FragmentCitiesHolderBinding by viewBinding()
 
-    override val viewModel: BaseViewModel by viewModel()
+    override val viewModel: CurrentWeatherViewModel by viewModel()
 
     private val adapter: CitiesAdapter by lazy {
         CitiesAdapter(
@@ -23,8 +27,26 @@ class CitiesHolderFragment :
 
     override fun setupViews() {
         super.setupViews()
-        adapter.setData(listOf("s", "3", "g"))
         binding.viewPager.adapter = adapter
+    }
+
+    override fun observeViewModel() {
+        super.observeViewModel()
+        observeSavedLocations()
+    }
+
+    private fun observeSavedLocations(){
+        viewModel.savedLocations.observe(viewLifecycleOwner, Observer{ status ->
+            when (status) {
+                is NetworkStatus.Success -> {
+                    adapter.setData(status.data)
+                }
+                is NetworkStatus.Error -> {
+                    Toast.makeText(requireContext(), status.message, Toast.LENGTH_SHORT).show()
+                }
+                is NetworkStatus.Loading -> {}
+            }
+        })
     }
 
 }

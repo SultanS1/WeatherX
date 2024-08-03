@@ -5,7 +5,7 @@ import com.test.weatherx.cities.domain.repository.WeatherRepository
 import com.test.weatherx.cities.domain.usecase.GetSavedLocationsUseCase
 import com.test.weatherx.cities.domain.usecase.GetSearchResultUseCase
 import com.test.weatherx.cities.presentation.CitiesViewModel
-import com.test.weatherx.common.remote.WeatherApi
+import com.test.weatherx.common.data.remote.WeatherApi
 import com.test.weatherx.core.db.AppDatabase
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel

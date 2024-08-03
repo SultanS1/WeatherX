@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.test.weatherx.R
 import com.test.weatherx.databinding.ItemCityBinding
 
@@ -22,6 +23,11 @@ class WeatherInfoAdapter: RecyclerView.Adapter<WeatherInfoAdapter.ViewHolder>() 
             binding.locationTxt.text = info.cityName
             binding.highestValueTxt.text = info.tempH
             binding.lowestValueTxt.text = info.tempM
+            binding.weatherTypeTxt.text = info.typeDescription
+            Glide.with(binding.typeIc).load("http:${info.typeIcon}").into(binding.typeIc)
+            binding.root.setOnClickListener {
+                clickToDetails?.invoke(info)
+            }
         }
 
     }

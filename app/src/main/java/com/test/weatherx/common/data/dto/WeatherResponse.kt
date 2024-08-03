@@ -1,4 +1,4 @@
-package com.test.weatherx.common.dto
+package com.test.weatherx.common.data.dto
 
 data class WeatherResponse(
     val location: Location,

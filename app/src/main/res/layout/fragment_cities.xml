@@ -31,6 +31,7 @@
         android:inputType="text"
         android:maxLines="1"
         android:padding="@dimen/dp_2x"
+        android:elevation="@dimen/_2dp"
         android:textColorHint="@color/hint_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
