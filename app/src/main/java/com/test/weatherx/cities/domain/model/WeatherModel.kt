@@ -10,5 +10,6 @@ data class WeatherModel(
     val typeDescription: String,
     val typeIcon: String,
     val windSpeed: String,
-    val humidity: String
+    val humidity: String,
+    val saved: Boolean
 )
