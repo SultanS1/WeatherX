@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/main_bg"
     android:padding="@dimen/dp_4x"
-    tools:context=".selected.moreInfo.presentation.ComingDaysFragment">
+    tools:context=".selected.forecast.presentation.ForecastFragment">
 
 
     <TextView
@@ -16,6 +16,8 @@
         android:text="@string/roma_italy"
         style="@style/TitleStyle"
         android:textSize="@dimen/sp_3x"
+        android:singleLine="true"
+        android:ellipsize="end"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -15,5 +15,6 @@
     <dimen name="_2dp">2dp</dimen>
     <dimen name="dp_12x">96dp</dimen>
     <dimen name="dp_9x">72dp</dimen>
+    <dimen name="dp_5x">40dp</dimen>
 
 </resources>
