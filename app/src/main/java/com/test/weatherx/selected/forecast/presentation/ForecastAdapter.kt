@@ -18,9 +18,9 @@ class ForecastAdapter: RecyclerView.Adapter<ForecastAdapter.ViewHolder>() {
         fun bind(info: ForecastUI){
             binding.highestValueTxt.text = "${info.maxTemp}°"
             binding.lowestValueTxt.text = "${info.minTemp}°"
-            binding.dateTxt.text = info.date
             Glide.with(binding.typeIc).load("http:${info.typeIcon}")
             binding.typeTxt.text = info.typeDescription
+            binding.dateTxt.text = info.date
         }
     }
 

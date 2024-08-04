@@ -14,9 +14,9 @@
         style="@style/TitleStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_1x"
         android:text="@string/today"
         android:textSize="@dimen/sp_3x"
-        android:layout_marginEnd="@dimen/dp_1x"
         app:layout_constraintEnd_toStartOf="@+id/typeIc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,29 +36,30 @@
 
     <ImageView
         android:id="@+id/typeIc"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/sun" />
 
     <TextView
         android:id="@+id/highestValueTxt"
-        android:layout_width="wrap_content"
+        style="@style/ValuesStyle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1x"
         android:text="@string/_33"
         android:textSize="@dimen/sp_2x"
-        android:layout_marginEnd="@dimen/dp_2x"
-        android:layout_marginTop="@dimen/dp_1x"
+        android:layout_marginEnd="@dimen/_4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/lowestValueTxt"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/typeIc"
         app:layout_constraintTop_toBottomOf="@+id/typeIc"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/lowestValueTxt"
+        style="@style/ValuesStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_33"

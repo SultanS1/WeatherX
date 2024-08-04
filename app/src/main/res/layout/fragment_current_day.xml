@@ -14,13 +14,13 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_6x"
         android:background="@drawable/rounded_corners"
         android:elevation="@dimen/_2dp"
         android:padding="@dimen/dp_3x"
+        android:layout_marginTop="@dimen/dp_2x"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/addBtn">
 
 
         <ImageView
@@ -35,12 +35,12 @@
 
         <TextView
             android:id="@+id/tempTxt"
+            style="@style/TitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_3x"
+            android:layout_marginTop="@dimen/dp_1x"
             android:text="@string/_38"
             android:textSize="@dimen/sp_4x"
-            style="@style/TitleStyle"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HUMIDITY"
-            android:textStyle="italic"
+            style="@style/DescriptionStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -117,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/wind"
-            android:textStyle="italic"
+            style="@style/DescriptionStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -156,7 +156,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/condition_type"
-            android:textStyle="italic"
+            style="@style/DescriptionStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -182,8 +182,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add"
-        android:textSize="@dimen/sp_3x"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        android:textSize="@dimen/sp_2x"
+        android:padding="@dimen/dp_1x"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

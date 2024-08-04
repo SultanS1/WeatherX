@@ -31,8 +31,10 @@ class CurrentDayFragment :
             setupArgument(argument)
             if (!argument.saved) {
                 binding.addBtn.visibility = View.VISIBLE
+                binding.moreBtn.visibility = View.GONE
             } else {
                 binding.addBtn.visibility = View.GONE
+                binding.moreBtn.visibility = View.VISIBLE
             }
         } else {
             println(getString(R.string.no_argument_passed_for_location))
