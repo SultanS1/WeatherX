@@ -6,6 +6,8 @@
         <item name="android:textStyle">bold</item>
         <item name="android:elevation">@dimen/dp_1x</item>
         <item name="android:textColor">@color/text_color</item>
+        <item name="android:ellipsize">end</item>
+        <item name="singleLine">true</item>
     </style>
 
     <style name="Widget.SearchView.Material" parent="Widget.AppCompat.SearchView">

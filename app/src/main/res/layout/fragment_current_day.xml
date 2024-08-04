@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_bg"
-    android:paddingTop="@dimen/dp_6x"
+    android:paddingTop="@dimen/dp_2x"
     android:paddingHorizontal="@dimen/dp_4x"
     android:paddingBottom="@dimen/dp_2x"
     tools:context=".selected.mainInfo.presentation.CurrentDayFragment">
@@ -14,7 +14,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_5x"
+        android:layout_marginTop="@dimen/dp_6x"
         android:background="@drawable/rounded_corners"
         android:elevation="@dimen/_2dp"
         android:padding="@dimen/dp_3x"
@@ -34,7 +34,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/dateTxt"
+            android:id="@+id/tempTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_3x"
@@ -53,9 +53,9 @@
             android:layout_marginTop="@dimen/dp_1x"
             android:text="@string/roma_italy"
             android:textSize="@dimen/sp_2x"
-            app:layout_constraintEnd_toEndOf="@+id/dateTxt"
-            app:layout_constraintStart_toStartOf="@+id/dateTxt"
-            app:layout_constraintTop_toBottomOf="@+id/dateTxt" />
+            app:layout_constraintEnd_toEndOf="@+id/tempTxt"
+            app:layout_constraintStart_toStartOf="@+id/tempTxt"
+            app:layout_constraintTop_toBottomOf="@+id/tempTxt" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -178,11 +178,12 @@
 
     <TextView
         android:id="@+id/addBtn"
+        style="@style/TitleStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add"
-        style="@style/TitleStyle"
         android:textSize="@dimen/sp_3x"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

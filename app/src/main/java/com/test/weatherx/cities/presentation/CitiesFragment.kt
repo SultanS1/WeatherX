@@ -69,7 +69,7 @@ class CitiesFragment :
             }else{
                 val bundle = Bundle()
                 bundle.putString(Constants.CITY_NAME, it.cityName)
-                findNavController().navigate(R.id.action_citiesFragment_to_citiesHolderFragment)
+                findNavController().navigate(R.id.action_citiesFragment_to_citiesHolderFragment, bundle)
 
             }
         }

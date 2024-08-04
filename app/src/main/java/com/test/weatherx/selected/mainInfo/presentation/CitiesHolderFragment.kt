@@ -6,6 +6,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.test.weatherx.R
 import com.test.weatherx.core.architecture.NetworkStatus
 import com.test.weatherx.core.baseViews.BaseFragment
+import com.test.weatherx.core.constants.Constants
 import com.test.weatherx.databinding.FragmentCitiesHolderBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -35,10 +36,17 @@ class CitiesHolderFragment :
     }
 
     private fun observeSavedLocations(){
+        val argument = arguments?.getString(Constants.CITY_NAME)
         viewModel.savedLocations.observe(viewLifecycleOwner, Observer{ status ->
             when (status) {
                 is NetworkStatus.Success -> {
                     adapter.setData(status.data)
+                    argument?.let { cityName ->
+                        val index = status.data.indexOfFirst { it.cityName.equals(cityName) }
+                        if (index != -1) {
+                            binding.viewPager.setCurrentItem(index, true)
+                        }
+                    }
                 }
                 is NetworkStatus.Error -> {
                     Toast.makeText(requireContext(), status.message, Toast.LENGTH_SHORT).show()

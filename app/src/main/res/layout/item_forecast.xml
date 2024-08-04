@@ -6,27 +6,29 @@
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_corners"
     android:elevation="@dimen/_2dp"
-    android:layout_marginVertical="@dimen/dp_1x"
+    android:layout_marginVertical="@dimen/_4dp"
     android:padding="@dimen/dp_3x">
 
     <TextView
         android:id="@+id/dateTxt"
         style="@style/TitleStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/today"
-        android:textSize="@dimen/sp_5x"
+        android:textSize="@dimen/sp_3x"
+        android:layout_marginEnd="@dimen/dp_1x"
+        app:layout_constraintEnd_toStartOf="@+id/typeIc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/typeTxt"
         style="@style/TitleStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_1x"
         android:text="@string/clear"
-        android:textSize="@dimen/sp_3x"
+        android:textSize="@dimen/sp_2x"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/dateTxt"
         app:layout_constraintStart_toStartOf="parent"

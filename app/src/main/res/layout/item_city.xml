@@ -31,15 +31,14 @@
 
     <TextView
         android:id="@+id/locationTxt"
-        android:layout_width="wrap_content"
+        style="@style/TitleStyle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_3x"
         android:text="@string/rome_italy"
         android:textSize="@dimen/sp_3x"
-        android:singleLine="true"
-        android:ellipsize="end"
-        style="@style/TitleStyle"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/typeIc"
         app:layout_constraintStart_toStartOf="@+id/weatherTypeTxt"
         app:layout_constraintTop_toBottomOf="@+id/weatherTypeTxt" />
 

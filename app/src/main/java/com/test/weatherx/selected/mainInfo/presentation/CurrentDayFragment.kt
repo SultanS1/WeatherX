@@ -41,7 +41,7 @@ class CurrentDayFragment :
 
     private fun setupArgument(location: CurrentWeatherUI) = with(binding) {
         locationTxt.text = location.cityName
-        dateTxt.text = location.dateTime
+        tempTxt.text = location.temp
         humidityTxt.text = location.humidity
         typeTxt.text = location.typeDescription
         windSpeedTxt.text = location.windSpeed
