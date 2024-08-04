@@ -49,23 +49,29 @@ class CitiesFragment :
         binding.citiesRv.layoutManager = LinearLayoutManager(requireContext())
         binding.citiesRv.adapter = adapter
         adapter.clickToDetails = {
-            val bundle = Bundle()
-            val currentWeather = CurrentWeatherUI(
-                cityName = it.cityName,
-                countryName = it.countryName,
-                dateTime = it.dateTime,
-                temp = it.temp,
-                tempH = it.tempH,
-                tempM = it.tempM,
-                typeDescription = it.typeDescription,
-                typeIcon = it.typeIcon,
-                windSpeed = it.windSpeed,
-                humidity = it.humidity,
-                saved = it.saved
+            if(!it.saved){
+                val bundle = Bundle()
+                val currentWeather = CurrentWeatherUI(
+                    cityName = it.cityName,
+                    countryName = it.countryName,
+                    dateTime = it.dateTime,
+                    temp = it.temp,
+                    tempH = it.tempH,
+                    tempM = it.tempM,
+                    typeDescription = it.typeDescription,
+                    typeIcon = it.typeIcon,
+                    windSpeed = it.windSpeed,
+                    humidity = it.humidity,
+                    saved = it.saved
+                )
+                bundle.putParcelable(Constants.LOCATION, currentWeather)
+                findNavController().navigate(R.id.action_citiesFragment_to_currentDayFragment, bundle)
+            }else{
+                val bundle = Bundle()
+                bundle.putString(Constants.CITY_NAME, it.cityName)
+                findNavController().navigate(R.id.action_citiesFragment_to_citiesHolderFragment)
 
-            )
-            bundle.putParcelable(Constants.CITY_KEY, currentWeather)
-            findNavController().navigate(R.id.action_citiesFragment_to_citiesHolderFragment)
+            }
         }
     }
 

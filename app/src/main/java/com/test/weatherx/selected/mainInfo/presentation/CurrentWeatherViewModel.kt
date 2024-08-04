@@ -28,4 +28,10 @@ class CurrentWeatherViewModel(
         }
     }
 
+    fun saveLocation(location: CurrentWeatherUI){
+        launch {
+            saveLocationUseCase(location.toModel())
+        }
+    }
+
 }

@@ -1,11 +1,9 @@
 package com.test.weatherx.selected.mainInfo.presentation
 
-import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.test.weatherx.R
-import com.test.weatherx.core.architecture.BaseViewModel
 import com.test.weatherx.core.architecture.NetworkStatus
 import com.test.weatherx.core.baseViews.BaseFragment
 import com.test.weatherx.databinding.FragmentCitiesHolderBinding
@@ -27,6 +25,7 @@ class CitiesHolderFragment :
 
     override fun setupViews() {
         super.setupViews()
+        viewModel.getAllLocations()
         binding.viewPager.adapter = adapter
     }
 

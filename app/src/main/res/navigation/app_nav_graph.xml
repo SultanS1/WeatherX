@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_citiesFragment_to_citiesHolderFragment"
             app:destination="@id/citiesHolderFragment" />
+        <action
+            android:id="@+id/action_citiesFragment_to_currentDayFragment"
+            app:destination="@id/currentDayFragment" />
     </fragment>
     <fragment
         android:id="@+id/citiesHolderFragment"

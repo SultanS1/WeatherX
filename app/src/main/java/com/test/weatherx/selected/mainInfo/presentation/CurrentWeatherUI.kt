@@ -34,3 +34,19 @@ fun CurrentWeatherModel.toUI(): CurrentWeatherUI {
         saved = saved
     )
 }
+
+fun CurrentWeatherUI.toModel(): CurrentWeatherModel {
+    return CurrentWeatherModel(
+        cityName = cityName,
+        countryName = countryName,
+        dateTime = dateTime,
+        temp = temp,
+        tempH = tempH,
+        tempM = tempM,
+        typeDescription = typeDescription,
+        typeIcon = typeIcon,
+        windSpeed = windSpeed,
+        humidity = humidity,
+        saved = saved
+    )
+}
