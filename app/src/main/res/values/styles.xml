@@ -6,6 +6,27 @@
         <item name="android:textStyle">bold</item>
         <item name="android:elevation">@dimen/dp_1x</item>
         <item name="android:textColor">@color/text_color</item>
+        <item name="android:ellipsize">end</item>
+        <item name="singleLine">true</item>
+        <item name="android:fontFamily">@font/roboto_mono_bold</item>
+    </style>
+
+    <!-- Value style -->
+    <style name="DescriptionStyle">
+        <item name="textAllCaps">false</item>
+        <item name="android:elevation">@dimen/dp_1x</item>
+        <item name="android:ellipsize">end</item>
+        <item name="singleLine">true</item>
+        <item name="android:fontFamily">@font/roboto_mono_medium</item>
+    </style>
+
+    <!-- Value style -->
+    <style name="ValuesStyle">
+        <item name="textAllCaps">false</item>
+        <item name="android:elevation">@dimen/dp_1x</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">@font/roboto_mono_light</item>
     </style>
 
     <style name="Widget.SearchView.Material" parent="Widget.AppCompat.SearchView">

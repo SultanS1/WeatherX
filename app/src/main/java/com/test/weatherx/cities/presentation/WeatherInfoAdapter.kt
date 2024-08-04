@@ -51,4 +51,8 @@ class WeatherInfoAdapter: RecyclerView.Adapter<WeatherInfoAdapter.ViewHolder>() 
         notifyDataSetChanged()
     }
 
+    fun isEmpty(): Boolean {
+        return items.isEmpty()
+    }
+
 }

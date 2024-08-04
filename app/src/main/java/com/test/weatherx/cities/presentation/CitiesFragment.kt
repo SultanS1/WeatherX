@@ -50,6 +50,7 @@ class CitiesFragment :
         binding.citiesRv.adapter = adapter
         adapter.clickToDetails = {
             if(!it.saved){
+
                 val bundle = Bundle()
                 val currentWeather = CurrentWeatherUI(
                     cityName = it.cityName,
@@ -66,11 +67,11 @@ class CitiesFragment :
                 )
                 bundle.putParcelable(Constants.LOCATION, currentWeather)
                 findNavController().navigate(R.id.action_citiesFragment_to_currentDayFragment, bundle)
+
             }else{
                 val bundle = Bundle()
                 bundle.putString(Constants.CITY_NAME, it.cityName)
-                findNavController().navigate(R.id.action_citiesFragment_to_citiesHolderFragment)
-
+                findNavController().navigate(R.id.action_citiesFragment_to_citiesHolderFragment, bundle)
             }
         }
     }
@@ -105,7 +106,9 @@ class CitiesFragment :
                     binding.progressBar.visibility = View.GONE
                 }
                 is NetworkStatus.Loading -> {
-                    binding.progressBar.visibility = View.VISIBLE
+                    if(adapter.isEmpty()){
+                        binding.progressBar.visibility = View.VISIBLE
+                    }
                 }
             }
         })

@@ -31,8 +31,10 @@ class CurrentDayFragment :
             setupArgument(argument)
             if (!argument.saved) {
                 binding.addBtn.visibility = View.VISIBLE
+                binding.moreBtn.visibility = View.GONE
             } else {
                 binding.addBtn.visibility = View.GONE
+                binding.moreBtn.visibility = View.VISIBLE
             }
         } else {
             println(getString(R.string.no_argument_passed_for_location))
@@ -41,7 +43,7 @@ class CurrentDayFragment :
 
     private fun setupArgument(location: CurrentWeatherUI) = with(binding) {
         locationTxt.text = location.cityName
-        dateTxt.text = location.dateTime
+        tempTxt.text = location.temp
         humidityTxt.text = location.humidity
         typeTxt.text = location.typeDescription
         windSpeedTxt.text = location.windSpeed

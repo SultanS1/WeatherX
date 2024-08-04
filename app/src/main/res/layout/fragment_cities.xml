@@ -28,6 +28,7 @@
         android:background="@drawable/rounded_corners"
         android:hint="@string/search_for_a_city"
         android:imeOptions="actionSearch"
+        style="@style/DescriptionStyle"
         android:inputType="text"
         android:maxLines="1"
         android:padding="@dimen/dp_2x"

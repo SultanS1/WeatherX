@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_bg"
-    android:paddingTop="@dimen/dp_6x"
+    android:paddingTop="@dimen/dp_2x"
     android:paddingHorizontal="@dimen/dp_4x"
     android:paddingBottom="@dimen/dp_2x"
     tools:context=".selected.mainInfo.presentation.CurrentDayFragment">
@@ -14,13 +14,13 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_5x"
         android:background="@drawable/rounded_corners"
         android:elevation="@dimen/_2dp"
         android:padding="@dimen/dp_3x"
+        android:layout_marginTop="@dimen/dp_2x"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/addBtn">
 
 
         <ImageView
@@ -34,13 +34,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/dateTxt"
+            android:id="@+id/tempTxt"
+            style="@style/TitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_3x"
+            android:layout_marginTop="@dimen/dp_1x"
             android:text="@string/_38"
             android:textSize="@dimen/sp_4x"
-            style="@style/TitleStyle"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -53,9 +53,9 @@
             android:layout_marginTop="@dimen/dp_1x"
             android:text="@string/roma_italy"
             android:textSize="@dimen/sp_2x"
-            app:layout_constraintEnd_toEndOf="@+id/dateTxt"
-            app:layout_constraintStart_toStartOf="@+id/dateTxt"
-            app:layout_constraintTop_toBottomOf="@+id/dateTxt" />
+            app:layout_constraintEnd_toEndOf="@+id/tempTxt"
+            app:layout_constraintStart_toStartOf="@+id/tempTxt"
+            app:layout_constraintTop_toBottomOf="@+id/tempTxt" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HUMIDITY"
-            android:textStyle="italic"
+            style="@style/DescriptionStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -117,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/wind"
-            android:textStyle="italic"
+            style="@style/DescriptionStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -156,7 +156,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/condition_type"
-            android:textStyle="italic"
+            style="@style/DescriptionStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -178,11 +178,12 @@
 
     <TextView
         android:id="@+id/addBtn"
+        style="@style/TitleStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add"
-        style="@style/TitleStyle"
-        android:textSize="@dimen/sp_3x"
+        android:textSize="@dimen/sp_2x"
+        android:padding="@dimen/dp_1x"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
