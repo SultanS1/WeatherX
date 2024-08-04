@@ -1,7 +1,9 @@
 package com.test.weatherx.selected.mainInfo.presentation
 
+import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.bumptech.glide.Glide
 import com.test.weatherx.R
@@ -21,7 +23,6 @@ class CurrentDayFragment :
     override fun setupViews() {
         super.setupViews()
         getParameters()
-
     }
 
     private fun getParameters(){
@@ -48,6 +49,11 @@ class CurrentDayFragment :
         addBtn.setOnClickListener {
             viewModel.saveLocation(location.copy(saved = true))
             Toast.makeText(requireContext(), getString(R.string.the_location_is_saved), Toast.LENGTH_SHORT).show()
+        }
+        moreBtn.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString(Constants.CITY_KEY, location.cityName)
+            findNavController().navigate(R.id.action_citiesHolderFragment_to_comingDaysFragment, bundle)
         }
     }
 

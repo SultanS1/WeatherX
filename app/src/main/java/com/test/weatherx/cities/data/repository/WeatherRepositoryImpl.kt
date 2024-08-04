@@ -33,7 +33,7 @@ class WeatherRepositoryImpl(
                 db.getCity(cityName).firstOrNull()?.toDomainModel()
             }
         } catch (e: Exception) {
-            null
+            db.getCity(cityName).firstOrNull()?.toDomainModel()
         }
     }
 

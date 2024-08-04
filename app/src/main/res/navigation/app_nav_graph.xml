@@ -27,9 +27,9 @@
     </fragment>
     <fragment
         android:id="@+id/comingDaysFragment"
-        android:name="com.test.weatherx.selected.moreInfo.presentation.ComingDaysFragment"
+        android:name="com.test.weatherx.selected.forecast.presentation.ForecastFragment"
         android:label="fragment_coming_days"
-        tools:layout="@layout/fragment_coming_days" />
+        tools:layout="@layout/fragment_forecast" />
     <fragment
         android:id="@+id/currentDayFragment"
         android:name="com.test.weatherx.selected.mainInfo.presentation.CurrentDayFragment"
